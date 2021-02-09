@@ -16,6 +16,10 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<project.name>spring-actuator-prometheus</project.name>
+		<project.description>Spring Actuator with Prometheus and Grafana</project.description>
+		<project.version>1.0.0</project.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
@@ -44,6 +48,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.metrics</groupId>
+			<artifactId>spring-metrics</artifactId>
+			<version>0.5.0.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
