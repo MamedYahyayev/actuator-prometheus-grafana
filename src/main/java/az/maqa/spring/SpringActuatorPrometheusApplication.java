@@ -1,8 +1,9 @@
 package az.maqa.spring;
 
+import io.micrometer.core.annotation.Timed;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.metrics.annotation.Timed;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +22,14 @@ public class SpringActuatorPrometheusApplication {
     }
 
     @GetMapping("/hello2")
+    @Timed
     public String hello2(){
         return "Hello 2";
     }
+
+    @GetMapping("/hello3")
+    public String hello3(){
+        return "Hello 3";
+    }
+
 }
