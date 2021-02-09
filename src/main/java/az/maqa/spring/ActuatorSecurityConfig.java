@@ -12,8 +12,8 @@ public class ActuatorSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
 
-                .antMatchers("/actuator/**").hasAuthority("ACTUATOR_ADMIN")
-
+                .antMatchers("/actuator/**").permitAll()
+                .antMatchers("/**").permitAll()
                 .anyRequest().authenticated();
     }
 }
